@@ -477,8 +477,9 @@ footer > div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     width: 50%;
+
+    margin-bottom: 2em;
 
     color: var(--clr-neutral-300);
 }
@@ -497,6 +498,7 @@ footer > div > p {
 footer > ul {
     display: flex;
     gap: 1em;
+    margin: 0;
 }
 
 footer > ul > li {
@@ -592,6 +594,10 @@ footer > ul > li {
 
     &.white {
         color: var(--clr-neutral-100);
+    }
+
+    &.gray {
+        color: var(--clr-neutral-300);
     }
 
     &.black {
