@@ -57,6 +57,7 @@ h2 {
     letter-spacing: -0.01em;
     word-spacing: 0.08em;
     animation: slide 0.5s ease-in-out;
+    font-weight: 400;
 }
 
 h3 {
@@ -217,13 +218,20 @@ article {
     }
 }
 
-.albums > a > .album-item {
+.album-items {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+
+    margin-top: 3em;
+}
+
+.album-item {
     position: relative;
     display: inline-flex;
     align-items: flex-start;
     justify-content: center;
-
-    width: 200px;
 
     margin: 0.5em;
 
@@ -250,8 +258,8 @@ article {
 }
 
 .album-item > img {
-    width: 50vw;
-    max-width: 200px;
+    width: 15vw;
+    min-width: 150px;
     border-radius: 7.5%;
     border: 1px solid transparent;
     transition: border-width 300ms, filter 800ms, border-radius 300ms;
@@ -266,7 +274,7 @@ article {
     align-items: flex-start;
 
     width: 100%;
-    height: 40%;
+    height: 35%;
     padding: 0.5em;
 
     border-radius: 0 0 15px 15px;
@@ -338,6 +346,10 @@ article {
 
 footer {
     font-family: Arial, Helvetica, sans-serif;
+
+    & h2 {
+        font-weight: 700;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -369,6 +381,20 @@ footer {
     main {
         margin: 16px;
         margin-top: 5em;
+    }
+
+    .album-items {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .album-item > .album-info {
+        height: 40%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .album-info > p {
+        display: none;
     }
 }
 
