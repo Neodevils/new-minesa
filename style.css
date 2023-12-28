@@ -80,6 +80,14 @@ a {
     color: var(--clr-neutral-900);
 }
 
+p {
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    line-height: 1.2;
+    letter-spacing: 0.001em;
+    word-spacing: 0.05em;
+    animation: slide 0.5s ease-in-out;
+}
+
 ul {
     list-style: none;
     padding-inline: 0;
@@ -92,7 +100,13 @@ body {
     margin: 0;
 
     font-family: system-ui, Arial, Helvetica, sans-serif;
-    background: linear-gradient(10deg, #f2deff 30%, #ffdede, #d9fffa, #fff7bd);
+    background: linear-gradient(
+        10deg,
+        #ffdede 10%,
+        #f2deff 40%,
+        #d9fffa,
+        #fff7bd
+    );
 }
 
 /* header */
@@ -172,7 +186,7 @@ nav {
     /* nav's texts */
     & > span {
         font-family: var(--tilt-warp-font-family);
-        font-size: clamp(0.2em, 0.33em + 1vw, 2.5em);
+        font-size: clamp(1em, 0.33em + 1vw, 2.5em);
     }
 }
 
@@ -181,13 +195,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-inline: 1em;
+    gap: 5em;
+
+    margin-inline: 3em;
 }
 
 /* article */
 article {
     padding-block: 2em;
-    padding-inline: 3em;
 
     & > h1 {
         margin-bottom: 0.25em;
@@ -202,8 +217,6 @@ article {
 
 div.main__container {
     display: flex;
-
-    padding: 2em;
 }
 
 /* section */
@@ -471,10 +484,6 @@ aside a.ita__container {
     }
 }
 
-section.team {
-    margin: 2em;
-}
-
 section .team-member-list {
     display: flex;
     margin-top: 5em;
@@ -529,10 +538,6 @@ section .team-member-task {
     color: var(--clr-neutral-300);
 }
 
-section.apps {
-    margin: 2em;
-}
-
 ul.section-tile-container {
     width: 100%;
     display: flex;
@@ -562,9 +567,11 @@ a.section-tile {
     border-radius: 10px;
     overflow: hidden;
 
+    &:hover,
     &:active,
     &:focus {
-        outline: 5px solid var(--clr-primary-300);
+        transform: scale(0.925);
+        cursor: pointer;
     }
 }
 
@@ -757,10 +764,18 @@ footer > ul > li {
 }
 
 @media (max-width: 968px) {
+    main {
+        margin: 1em;
+    }
+
     div.main__container {
         flex-direction: column-reverse;
         row-gap: 3em;
         align-items: center;
+    }
+
+    aside {
+        row-gap: 3em;
     }
 
     aside div.horizontal__container {
