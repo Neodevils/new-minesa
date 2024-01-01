@@ -58,35 +58,31 @@ body {
 }
 
 h1 {
-    font-size: clamp(2rem, 10vw, 6rem);
+    font-size: clamp(3rem, 10vw, 6rem);
     line-height: 1.2;
     letter-spacing: -0.02em;
     word-spacing: 0.1em;
-    animation: slide 0.5s ease-in-out;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.2;
     letter-spacing: -0.01em;
     word-spacing: 0.08em;
-    animation: slide 0.5s ease-in-out;
 }
 
 h3 {
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.2;
     letter-spacing: -0.005em;
     word-spacing: 0.05em;
-    animation: slide 0.5s ease-in-out;
 }
 
 h4 {
-    font-size: clamp(1.1rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     line-height: 1.2;
     letter-spacing: -0.02em;
     word-spacing: 0.1em;
-    animation: slide 0.5s ease-in-out;
 }
 
 h5 {
@@ -94,15 +90,13 @@ h5 {
     line-height: 1.2;
     letter-spacing: -0.015em;
     word-spacing: 0.08em;
-    animation: slide 0.5s ease-in-out;
 }
 
 h6 {
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: clamp(0.5rem, 2vw, 1rem);
     line-height: 1.2;
     letter-spacing: -0.01em;
     word-spacing: 0.05em;
-    animation: slide 0.5s ease-in-out;
 }
 
 a {
@@ -115,7 +109,6 @@ p {
     line-height: 1.5;
     letter-spacing: 0.001em;
     word-spacing: 0.05em;
-    animation: slide 0.5s ease-in-out;
 }
 
 ul {
@@ -132,8 +125,6 @@ header {
 
     margin-top: var(--margin-block);
 
-    animation: fade-up 1s ease-in-out;
-
     /* image of header */
     & > img {
         position: relative;
@@ -143,7 +134,7 @@ header {
         border-radius: 25px;
 
         object-fit: cover;
-        object-position: center 55%;
+        object-position: center 20%;
         box-shadow: 0 5px 100px 10px var(--box-shadow-900);
         z-index: -1;
 
@@ -164,12 +155,9 @@ header > div.logo__container {
     border: 1px solid var(--clr-neutral-900);
     padding: 0.2em 0.4em;
 
-    opacity: 0.85;
+    opacity: 0.6;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 0 15px #ffffff5f;
-
-    animation: fade-up 1.5s ease-in-out;
 
     /* logo */
     & > img {
@@ -196,8 +184,6 @@ nav {
 
     margin: 3em;
 
-    animation: fade-up 1.5s ease-in-out;
-
     /* nav's texts */
     & > span {
         font-family: var(--tilt-warp-font-family);
@@ -221,8 +207,6 @@ article {
 
     & > h1 {
         margin-bottom: 0.25em;
-
-        animation: fade-up 0.5s ease-in-out;
     }
 
     & > p {
@@ -645,6 +629,10 @@ a.section-tile {
     border-bottom-left-radius: 0;
 }
 
+.icon {
+    width: 0.3em;
+}
+
 footer {
     width: 100%;
     display: flex;
@@ -671,6 +659,8 @@ footer > div {
 }
 
 footer > div > h2 {
+    margin-block: auto;
+
     background: -webkit-linear-gradient(0deg, #eee, #333);
     background-clip: text;
     -webkit-background-clip: text;
@@ -810,6 +800,10 @@ footer > ul > li {
 
     footer {
         flex-direction: column;
+    }
+
+    footer > div {
+        width: 100%;
     }
 
     footer > ul {
