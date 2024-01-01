@@ -677,7 +677,7 @@ footer > ul {
     margin: 0;
 }
 
-footer > ul > li {
+footer > ul > a li {
     font-family: var(--gloock-font-family);
     color: var(--clr-neutral-300);
 
