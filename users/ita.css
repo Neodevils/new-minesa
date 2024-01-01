@@ -29,6 +29,7 @@
 body {
     font-family: system-ui, Arial, Helvetica, sans-serif;
     font-weight: 100;
+    background: #000;
 }
 
 h1,
@@ -46,10 +47,6 @@ h6 {
     background-color: rgba(var(--ita-color), 0.4);
     font-weight: 600;
     color: var(--clr-neutral-100);
-}
-
-body {
-    background: #000000;
 }
 
 nav {
@@ -80,6 +77,7 @@ nav {
 
 main {
     display: block;
+    margin: auto !important;
     margin-inline: auto;
 }
 
@@ -104,7 +102,6 @@ main section.hero__section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
 
     &::after {
         content: "";
